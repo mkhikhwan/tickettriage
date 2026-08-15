@@ -7,9 +7,11 @@
 <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
+<div class="bg"><i></i></div>
+<div class="layer">
 
 <header class="site">
-  <div class="wrap">
+  <div class="wrap admin-wrap">
     <div class="brand">Ticket<span>Triage</span></div>
     <nav class="site">
       <a href="/index.html">Submit a ticket</a>
@@ -19,14 +21,18 @@
 </header>
 
 <main>
-  <div class="wrap">
-    <h1>Ticket review</h1>
-    <p class="lede">Filter incoming tickets, check how each one was categorised, and move it through the workflow.</p>
+  <div class="wrap admin-wrap">
+    <div class="admin-header">
+      <div>
+        <h1>Ticket queue</h1>
+        <p class="lede">Filter incoming tickets, check how each one was categorised, and move it through the workflow.</p>
+      </div>
+      <div class="stats" id="stats"></div>
+    </div>
 
     <div id="banner"></div>
-    <div class="stats" id="stats"></div>
 
-    <div class="card">
+    <div class="card toolbar">
       <div class="filters">
         <div>
           <label for="f-category">Category</label>
@@ -58,7 +64,7 @@
       </div>
     </div>
 
-    <div class="card" style="padding:0;overflow:hidden;">
+    <div class="card table-card">
       <div class="table-scroll">
         <table>
           <thead>
@@ -86,5 +92,6 @@
 </footer>
 
 <script type="module" src="/js/admin.js"></script>
+</div>
 </body>
 </html>
