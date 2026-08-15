@@ -10,8 +10,8 @@ steps:
 
 - task: AzureStaticWebApp@0
   inputs:
-    app_location: '/'                  # App source code path relative to repository root
-    api_location: ''                # Azure Functions backend folder path (optional/leave blank if none)
-    output_location: 'dist'            # Build output folder relative to app_location (e.g., build, dist, wwwroot)
+    app_location: '/frontend'
+    api_location: ''
+    output_location: ''
   env:
     azure_static_web_apps_api_token: $(AZURE_STATIC_WEB_APPS_API_TOKEN)
