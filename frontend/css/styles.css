@@ -102,6 +102,13 @@ header.site {
 
 .wrap { width: min(880px, 90%); margin: 0 auto; }
 
+/* ── content layer ── */
+.layer { position: relative; z-index: 1; min-height: 100vh; display: flex; flex-direction: column; }
+
+/* ── header ── */
+header.site { border-bottom: 1px solid var(--border); padding: 18px 0; }
+.wrap { width: min(960px, 90%); margin: 0 auto; }
+.admin-wrap { width: min(1120px, 94%); }
 header.site .wrap { display: flex; align-items: center; gap: 16px; }
 
 .brand {
@@ -114,7 +121,7 @@ header.site .wrap { display: flex; align-items: center; gap: 16px; }
 }
 .brand span { color: var(--brand); }
 
-nav.site { margin-left: auto; display: flex; gap: 6px; }
+nav.site { margin-left: auto; display: flex; gap: 4px; }
 nav.site a {
   color: var(--ink-soft);
   text-decoration: none;
@@ -141,6 +148,48 @@ h1 {
 
 .lede { color: var(--ink-soft); margin: 0 0 32px; max-width: 62ch; font-size: 1.05rem; }
 
+.hero { padding-top: 12px; }
+.eyebrow {
+  text-transform: uppercase;
+  font-size: .82rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  color: var(--brand);
+  margin: 0 0 12px;
+}
+
+.steps {
+  list-style: none;
+  padding: 0;
+  margin: 32px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.steps li {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+.step-n {
+  flex-shrink: 0;
+  width: 36px; height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--brand);
+  color: #fff;
+  font-family: "Instrument Serif", Georgia, serif;
+  font-style: italic;
+  font-size: 1.25rem;
+}
+.steps li div { font-size: .95rem; color: var(--ink-soft); line-height: 1.5; }
+.steps li div strong { color: var(--ink); }
+
+.form-col { min-width: 0; }
+
+/* ── cards ── */
 .card {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -149,6 +198,7 @@ h1 {
   padding: 28px;
   margin-bottom: 24px;
 }
+.table-card { padding: 0; overflow: hidden; }
 
 .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 @media (max-width: 720px) { .grid-2 { grid-template-columns: 1fr; } }
@@ -177,6 +227,7 @@ textarea { min-height: 140px; resize: vertical; }
 .field.invalid input, .field.invalid textarea, .field.invalid select { border-color: var(--danger); }
 .field.invalid .err { display: block; }
 
+/* ── buttons ── */
 button {
   font: inherit;
   font-weight: 500;
