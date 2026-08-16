@@ -14,7 +14,7 @@ steps:
   inputs:
     app_location: '/frontend'
     api_location: ''
-    output_location: 'dist' # Adjust to 'build', 'public', or relevant build output directory
+    output_location: ''
   env:
     azure_static_web_apps_api_token: $(AZURE_STATIC_WEB_APPS_API_TOKEN)
 
