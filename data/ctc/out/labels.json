@@ -1,0 +1,2830 @@
+{
+  "projectFileVersion": "2022-05-01",
+  "stringIndexType": "Utf16CodeUnit",
+  "metadata": {
+    "projectKind": "CustomSingleLabelClassification",
+    "storageInputContainerName": "tickettriage-training-data",
+    "projectName": "TicketTriageClassifier",
+    "multilingual": false,
+    "description": "Ticket category classifier for TicketTriage capstone (v3, 400 examples)",
+    "language": "en"
+  },
+  "assets": {
+    "projectKind": "CustomSingleLabelClassification",
+    "classes": [
+      {
+        "category": "Course Registration"
+      },
+      {
+        "category": "Facilities"
+      },
+      {
+        "category": "General Enquiry"
+      },
+      {
+        "category": "IT Support"
+      },
+      {
+        "category": "Library Services"
+      },
+      {
+        "category": "Student Finance"
+      }
+    ],
+    "documents": [
+      {
+        "location": "it_support_001.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_002.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_003.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_004.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_005.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_006.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_007.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_008.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_009.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_010.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_011.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_012.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_013.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_014.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_015.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_016.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_017.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_018.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_019.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_020.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_021.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_022.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_023.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_024.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_025.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_026.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_027.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_028.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_029.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_030.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_031.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_032.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_033.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_034.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_035.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_036.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_037.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_038.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_039.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_040.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_041.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_042.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_043.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_044.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_045.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_046.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_047.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_048.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_049.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_050.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_051.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_052.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_053.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_054.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_055.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_056.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_057.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_058.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_059.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_060.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_061.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_062.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_063.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_064.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_065.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_066.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "it_support_067.txt",
+        "language": "en",
+        "class": {
+          "category": "IT Support"
+        }
+      },
+      {
+        "location": "facilities_001.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_002.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_003.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_004.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_005.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_006.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_007.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_008.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_009.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_010.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_011.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_012.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_013.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_014.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_015.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_016.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_017.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_018.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_019.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_020.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_021.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_022.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_023.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_024.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_025.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_026.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_027.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_028.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_029.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_030.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_031.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_032.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_033.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_034.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_035.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_036.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_037.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_038.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_039.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_040.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_041.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_042.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_043.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_044.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_045.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_046.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_047.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_048.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_049.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_050.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_051.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_052.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_053.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_054.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_055.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_056.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_057.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_058.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_059.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_060.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_061.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_062.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_063.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_064.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_065.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_066.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "facilities_067.txt",
+        "language": "en",
+        "class": {
+          "category": "Facilities"
+        }
+      },
+      {
+        "location": "course_registration_001.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_002.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_003.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_004.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_005.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_006.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_007.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_008.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_009.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_010.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_011.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_012.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_013.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_014.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_015.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_016.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_017.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_018.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_019.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_020.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_021.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_022.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_023.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_024.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_025.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_026.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_027.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_028.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_029.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_030.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_031.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_032.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_033.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_034.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_035.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_036.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_037.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_038.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_039.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_040.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_041.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_042.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_043.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_044.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_045.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_046.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_047.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_048.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_049.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_050.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_051.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_052.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_053.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_054.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_055.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_056.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_057.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_058.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_059.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_060.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_061.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_062.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_063.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_064.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_065.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_066.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "course_registration_067.txt",
+        "language": "en",
+        "class": {
+          "category": "Course Registration"
+        }
+      },
+      {
+        "location": "student_finance_001.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_002.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_003.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_004.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_005.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_006.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_007.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_008.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_009.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_010.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_011.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_012.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_013.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_014.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_015.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_016.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_017.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_018.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_019.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_020.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_021.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_022.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_023.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_024.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_025.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_026.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_027.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_028.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_029.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_030.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_031.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_032.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_033.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_034.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_035.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_036.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_037.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_038.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_039.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_040.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_041.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_042.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_043.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_044.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_045.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_046.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_047.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_048.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_049.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_050.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_051.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_052.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_053.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_054.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_055.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_056.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_057.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_058.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_059.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_060.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_061.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_062.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_063.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_064.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_065.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_066.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "student_finance_067.txt",
+        "language": "en",
+        "class": {
+          "category": "Student Finance"
+        }
+      },
+      {
+        "location": "library_services_001.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_002.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_003.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_004.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_005.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_006.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_007.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_008.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_009.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_010.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_011.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_012.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_013.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_014.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_015.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_016.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_017.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_018.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_019.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_020.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_021.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_022.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_023.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_024.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_025.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_026.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_027.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_028.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_029.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_030.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_031.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_032.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_033.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_034.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_035.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_036.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_037.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_038.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_039.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_040.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_041.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_042.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_043.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_044.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_045.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_046.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_047.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_048.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_049.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_050.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_051.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_052.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_053.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_054.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_055.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_056.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_057.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_058.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_059.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_060.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_061.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_062.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_063.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_064.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_065.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "library_services_066.txt",
+        "language": "en",
+        "class": {
+          "category": "Library Services"
+        }
+      },
+      {
+        "location": "general_enquiry_001.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_002.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_003.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_004.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_005.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_006.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_007.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_008.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_009.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_010.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_011.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_012.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_013.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_014.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_015.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_016.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_017.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_018.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_019.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_020.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_021.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_022.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_023.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_024.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_025.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_026.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_027.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_028.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_029.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_030.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_031.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_032.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_033.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_034.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_035.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_036.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_037.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_038.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_039.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_040.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_041.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_042.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_043.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_044.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_045.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_046.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_047.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_048.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_049.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_050.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_051.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_052.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_053.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_054.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_055.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_056.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_057.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_058.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_059.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_060.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_061.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_062.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_063.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_064.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      },
+      {
+        "location": "general_enquiry_065.txt",
+        "language": "en",
+        "class": {
+          "category": "General Enquiry"
+        }
+      }
+    ]
+  }
+}

@@ -10,6 +10,7 @@ __pycache__/
 venv/
 .pytest_cache/
 .coverage
+scratch/
 
 # Azure Functions / SWA tooling
 bin/

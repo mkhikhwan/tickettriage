@@ -63,7 +63,8 @@ ONTOLOGY: Dict[str, Dict[str, List[str]]] = {
         "strong": [
             "wifi", "wi-fi", "vpn", "mfa", "password", "login", "logon",
             "laptop", "malware", "virus", "outlook", "moodle", "blackboard",
-            "canvas", "onedrive", "sharepoint", "username", "authentication",
+            "canvas", "onedrive", "sharepoint", "username", "authentication", 
+            "hacked", "compromised", "phishing",
         ],
         "medium": [
             "internet", "network", "computer", "pc", "software", "install",
@@ -87,16 +88,17 @@ ONTOLOGY: Dict[str, Dict[str, List[str]]] = {
             "aircon", "hvac", "toilet", "washroom", "restroom", "janitor",
             "cleaner", "cleaning", "plumbing", "leaking", "elevator", "lift",
             "corridor", "hallway", "furniture", "pest", "cockroach", "rodent",
+            "dorm", "dormitory", "hostel",
         ],
         "medium": [
             "classroom", "room", "building", "campus", "maintenance", "repair",
-            "lighting", "light", "heating", "ventilation", "chair", "desk",
+            "lighting", "light", "heating", "ventilation", "chair",
             "door", "window", "lock", "parking", "stairs", "roof", "floor",
         ],
         "weak": [
             "broken", "damaged", "dirty", "smell", "noise", "noisy", "cold",
             "hot", "temperature", "leak", "bulb", "bin", "rubbish", "trash",
-            "printer", "projector",
+            "printer", "projector", "desk",
         ],
     },
     COURSE_REGISTRATION: {
@@ -112,12 +114,12 @@ ONTOLOGY: Dict[str, Dict[str, List[str]]] = {
             "registration", "register", "enrol", "enroll", "enrolment",
             "enrollment", "timetable", "prerequisite", "prerequisites",
             "elective", "syllabus", "curriculum", "withdraw", "withdrawal",
-            "semester", "trimester", "transcript",
+            "trimester", "transcript", "waitlist",
         ],
         "medium": [
             "course", "module", "subject", "class", "section", "credit",
             "schedule", "lecture", "tutorial", "programme", "program",
-            "faculty", "cohort", "intake", "deferment",
+            "faculty", "cohort", "intake", "deferment", "semester",
         ],
         "weak": [
             "add", "drop", "swap", "change", "seat", "slot", "study", "academic",
@@ -129,16 +131,16 @@ ONTOLOGY: Dict[str, Dict[str, List[str]]] = {
             "late payment", "payment plan", "financial aid", "outstanding balance",
             "fee statement", "proof of payment", "double charged", "charged twice",
             "refund my", "my invoice", "bank transfer", "credit card",
-            "instalment plan", "installment plan", "fee waiver",
+            "instalment plan", "installment plan", "fee waiver", "money back", "double billed",
         ],
         "strong": [
             "tuition", "invoice", "refund", "scholarship", "bursary", "ptptn",
             "billing", "bursar", "sponsorship", "sponsor", "instalment",
-            "installment", "reimbursement", "receipt", "overpayment",
+            "installment", "reimbursement", "receipt", "overpayment", "disbursement",
         ],
         "medium": [
             "fee", "fees", "payment", "balance", "charge", "charged", "deposit",
-            "finance", "financial", "bill", "account statement", "waiver",
+            "finance", "financial", "bill", "billed", "account statement", "waiver",
             "penalty", "transaction",
         ],
         "weak": [
@@ -155,14 +157,14 @@ ONTOLOGY: Dict[str, Dict[str, List[str]]] = {
             "return the book", "reserve a book",
         ],
         "strong": [
-            "library", "librarian", "borrow", "borrowing", "overdue", "isbn",
+            "library", "librarian", "borrow", "borrowing", "borrowed", "overdue", "isbn",
             "catalogue", "catalog", "bibliography", "citation", "thesis",
             "dissertation", "ebook", "journal", "periodical", "archive",
         ],
         "medium": [
-            "book", "books", "renew", "renewal", "return", "reserve",
+            "book", "books", "renew", "renewal", "return", "returned", "reserve",
             "reservation", "shelf", "database", "article", "publication",
-            "reference", "reading",
+            "reference", "reading", "textbook", "textbooks",
         ],
         "weak": [
             "loan", "fine", "due", "copy", "print", "chapter", "author", "title",
@@ -180,6 +182,26 @@ _BUCKET_WEIGHTS = {
     "weak": WEIGHT_WEAK,
 }
 
+# def _compile() -> Dict[str, List[Tuple[re.Pattern, int, str]]]:
+#     """Pre-compile every term into a word-boundary regex, once at import time."""
+#     compiled: Dict[str, List[Tuple[re.Pattern, int, str]]] = {}
+#     for category, buckets in ONTOLOGY.items():
+#         entries: List[Tuple[re.Pattern, int, str]] = []
+#         for bucket, terms in buckets.items():
+#             weight = _BUCKET_WEIGHTS[bucket]
+#             is_phrase = bucket == "phrases"
+#             for term in terms:
+#                 if is_phrase:
+#                     # Phrases match exactly -- some rely on negation words
+#                     # ("no internet") that shouldn't be touched.
+#                     pattern = re.compile(r"(?<!\w)" + re.escape(term) + r"(?!\w)", re.IGNORECASE)
+#                 else:
+#                     # Single words tolerate a trailing "s"/"es" so plurals
+#                     # match automatically: "printer" also matches "printers".
+#                     pattern = re.compile(r"(?<!\w)" + re.escape(term) + r"(?:es|s)?(?!\w)", re.IGNORECASE)
+#                 entries.append((pattern, weight, term))
+#         compiled[category] = entries
+#     return compiled
 
 def _compile() -> Dict[str, List[Tuple[re.Pattern, int, str]]]:
     """Pre-compile every term into a word-boundary regex, once at import time."""
