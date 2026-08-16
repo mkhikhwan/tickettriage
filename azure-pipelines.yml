@@ -2,16 +2,50 @@ trigger:
   - main
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: 'ubuntu-latest'
 
 steps:
 - checkout: self
   submodules: true
 
+# 1. Deploy Static Web App (Frontend)
 - task: AzureStaticWebApp@0
+  displayName: 'Deploy Frontend'
   inputs:
     app_location: '/frontend'
-    api_location: '/api'
-    output_location: ''
+    api_location: ''
+    output_location: 'dist' # Adjust to 'build', 'public', or relevant build output directory
   env:
     azure_static_web_apps_api_token: $(AZURE_STATIC_WEB_APPS_API_TOKEN)
+
+# 2. Setup Python & Install Dependencies into Backend Directory
+- task: UsePythonVersion@0
+  displayName: 'Use Python 3.11'
+  inputs:
+    versionSpec: '3.11'
+
+- script: |
+    python -m pip install --upgrade pip
+    pip install --target=".python_packages/lib/site-packages" -r requirements.txt
+  workingDirectory: '$(System.DefaultWorkingDirectory)/api'
+  displayName: 'Install Python dependencies'
+
+# 3. Package Function App (Backend)
+- task: ArchiveFiles@2
+  displayName: 'Package API Function App'
+  inputs:
+    rootFolderOrFile: '$(System.DefaultWorkingDirectory)/api'
+    includeRootFolder: false
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/api.zip'
+    replaceExistingArchive: true
+
+# 4. Deploy to Standalone Linux Azure Function App
+- task: AzureFunctionApp@2
+  displayName: 'Deploy API to Linux Function App'
+  inputs:
+    azureSubscription: 'Azure-Subscription-Connection'
+    appType: 'functionAppLinux'
+    appName: 'func-ai200-triage-service'
+    package: '$(Build.ArtifactStagingDirectory)/api.zip'
+    deploymentMethod: 'zipDeploy'
