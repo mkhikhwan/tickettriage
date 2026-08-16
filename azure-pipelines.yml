@@ -4,6 +4,8 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
+pr: none
+
 steps:
 - checkout: self
   submodules: true
