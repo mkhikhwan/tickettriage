@@ -246,6 +246,21 @@ def test_reading_a_ticket_never_requires_the_admin_key(monkeypatch):
     get_settings(refresh=True)
 
 
+def test_list_requires_the_admin_key_when_one_is_configured(monkeypatch):
+    import tickets
+    monkeypatch.setenv("ADMIN_API_KEY", "s3cret")
+    get_settings(refresh=True)
+
+    denied = tickets.main(request("GET", "/api/tickets"))
+    assert denied.status_code == 401
+
+    allowed = tickets.main(request("GET", "/api/tickets", headers={"x-admin-key": "s3cret"}))
+    assert allowed.status_code == 200
+
+    get_settings(refresh=True)
+
+
+
 # ---------------------------------------------------------------------------
 # Reference and health endpoints
 # ---------------------------------------------------------------------------
@@ -276,3 +291,27 @@ def test_health_counts_tickets():
     create()
     payload = body_of(health.main(request("GET", "/api/health")))
     assert payload["stats"]["total"] == 1
+
+
+def test_create_ticket_rate_limiting(monkeypatch):
+    import tickets
+    from shared.http import _request_history
+    _request_history.clear()
+
+    monkeypatch.setenv("RATE_LIMIT_TICKETS_PER_MINUTE", "3")
+    monkeypatch.setenv("RATE_LIMIT_ENABLED", "True")
+    get_settings(refresh=True)
+
+    for _ in range(3):
+        response = tickets.main(request("POST", "/api/tickets", body=dict(VALID), headers={"x-forwarded-for": "1.2.3.4"}))
+        assert response.status_code == 201
+
+    blocked = tickets.main(request("POST", "/api/tickets", body=dict(VALID), headers={"x-forwarded-for": "1.2.3.4"}))
+    assert blocked.status_code == 429
+    assert blocked.headers["Retry-After"] == "60"
+
+    other = tickets.main(request("POST", "/api/tickets", body=dict(VALID), headers={"x-forwarded-for": "5.6.7.8"}))
+    assert other.status_code == 201
+
+    get_settings(refresh=True)
+

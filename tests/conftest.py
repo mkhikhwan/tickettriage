@@ -25,12 +25,15 @@ def clean_env(monkeypatch):
         "CosmosDBConnectionString",
         "LANGUAGE_ENDPOINT", "LANGUAGE_KEY", "LANGUAGE_CTC_PROJECT",
         "LANGUAGE_CTC_DEPLOYMENT", "ADMIN_API_KEY", "ALLOW_ANONYMOUS_ADMIN",
+        "RATE_LIMIT_TICKETS_PER_MINUTE", "RATE_LIMIT_ENABLED",
     ]:
         monkeypatch.delenv(name, raising=False)
 
     from shared.config import get_settings
+    from shared.http import _request_history
     from shared.repository import get_repository
 
+    _request_history.clear()
     settings = get_settings(refresh=True)
     get_repository(settings, refresh=True)
     return settings

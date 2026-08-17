@@ -3,6 +3,9 @@
 from __future__ import annotations
 
 import json
+import threading
+import time
+from collections import defaultdict
 from typing import Any, Dict, Optional
 
 import azure.functions as func
@@ -72,3 +75,40 @@ def require_admin(req: func.HttpRequest, settings) -> Optional[func.HttpResponse
             return error_response("Sign-in required for admin actions.", 401)
 
     return None
+
+
+_rate_limit_lock = threading.Lock()
+_request_history: Dict[str, list[float]] = defaultdict(list)
+
+
+def get_client_ip(req: func.HttpRequest) -> str:
+    """Detect the client's IP address from headers, falling back to localhost."""
+    xff = req.headers.get("x-forwarded-for")
+    if xff:
+        # X-Forwarded-For can contain multiple IPs, the first one is the client
+        return xff.split(",")[0].strip()
+    client_ip = req.headers.get("client-ip")
+    if client_ip:
+        return client_ip.strip()
+    return "127.0.0.1"
+
+
+def check_rate_limit(req: func.HttpRequest, limit: int, period_seconds: int = 60) -> bool:
+    """
+    Check if a client IP is within rate limits.
+    Returns True if allowed, False if rate limited.
+    """
+    ip = get_client_ip(req)
+    now = time.time()
+    with _rate_limit_lock:
+        history = _request_history[ip]
+        cutoff = now - period_seconds
+        # Keep only timestamps in the current window
+        history = [t for t in history if t > cutoff]
+        if len(history) >= limit:
+            _request_history[ip] = history
+            return False
+        history.append(now)
+        _request_history[ip] = history
+        return True
+

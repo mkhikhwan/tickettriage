@@ -52,6 +52,12 @@ class Settings:
         default_factory=lambda: _bool(os.environ.get("ALLOW_ANONYMOUS_ADMIN"), default=True)
     )
     max_page_size: int = field(default_factory=lambda: int(_clean(os.environ.get("MAX_PAGE_SIZE")) or "100"))
+    rate_limit_tickets_per_minute: int = field(
+        default_factory=lambda: int(_clean(os.environ.get("RATE_LIMIT_TICKETS_PER_MINUTE")) or "5")
+    )
+    rate_limit_enabled: bool = field(
+        default_factory=lambda: _bool(os.environ.get("RATE_LIMIT_ENABLED"), default=True)
+    )
 
     # ---- Derived -------------------------------------------------------
     @property
