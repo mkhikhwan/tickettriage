@@ -1,6 +1,6 @@
 /* Thin wrapper over the /api routes. Everything else talks to this. */
 
-const API_BASE = "/api";
+const API_BASE = "https://func-ai200-triage-service.azurewebsites.net/api";
 
 /** Remembered only for the current tab, never written to storage. */
 let adminKey = "";
