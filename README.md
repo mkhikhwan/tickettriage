@@ -11,8 +11,9 @@ The application is configured to run fully on Azure Free-Tier services: **Static
 2. [Local Setup & Installation](#2-local-setup--installation)
 3. [Running the Application Locally](#3-running-the-application-locally)
 4. [Connecting to Live Cosmos DB (Local Testing)](#4-connecting-to-live-cosmos-db-local-testing)
-5. [Running Unit Tests](#5-running-unit-tests)
-6. [Step-by-Step Azure Deployment Guide](#6-step-by-step-azure-deployment-guide)
+5. [Connecting to Azure AI Language (Ticket Classification)](#5-connecting-to-azure-ai-language-ticket-classification)
+6. [Running Unit Tests](#6-running-unit-tests)
+7. [Step-by-Step Azure Deployment Guide](#7-step-by-step-azure-deployment-guide)
 
 ---
 
@@ -120,7 +121,37 @@ Restart your development server (`python scripts/dev_server.py`). Open [http://l
 
 ---
 
-## 5. Running Unit Tests
+## 5. Connecting to Azure AI Language (Ticket Classification)
+
+By default, ticket classification falls back to the offline keyword-rules engine. To enable the trained AI classifier (Custom Text Classification) locally:
+
+### Step 1: Retrieve the Language Resource Details
+1. Log into the [Azure Portal](https://portal.azure.com/).
+2. Select the team's Language resource (inside `rg-ai200-capstone`).
+3. Under **Resource Management -> Keys and Endpoint**, copy the **Endpoint** and **Key 1**.
+
+### Step 2: Add to Your Local Settings File
+Add these four values to your existing `api/local.settings.json` (the same file from Section 4):
+```json
+"LANGUAGE_ENDPOINT": "<paste-the-endpoint-url-here>",
+"LANGUAGE_KEY": "<paste-key-1-here>",
+"LANGUAGE_CTC_PROJECT": "TicketTriageClassifier",
+"LANGUAGE_CTC_DEPLOYMENT": "production"
+```
+
+> [!NOTE]
+> `LANGUAGE_CTC_PROJECT` and `LANGUAGE_CTC_DEPLOYMENT` should stay exactly as shown above — they identify the already-trained model deployed on the team's Language resource (trained on 399 example tickets, ~0.90 microF1). Do not rename these or retrain unless you know what you're doing: the Free tier only allows **1 hour of training time per month**. The setup script that created this model lives at `api/tools/setup_ctc_project.py`, with the training data at `data/ctc/out/labels.json`.
+
+### Step 3: Run and Verify
+Restart your development server (`python scripts/dev_server.py`). Submit a test ticket:
+```bash
+curl -X POST http://127.0.0.1:4280/api/tickets -H "Content-Type: application/json" -d "{\"name\":\"Test\",\"title\":\"wifi problem\",\"description\":\"cannot connect to campus wifi\",\"email\":\"test@student.edu\"}"
+```
+Check the response — `classificationMethod` should read `azure-ai-language-custom`, confirming the trained model is active. If it instead shows `azure-ai-language-keyphrase` or `keyword-rules`, double check your `LANGUAGE_KEY` value.
+
+---
+
+## 6. Running Unit Tests
 
 To run the unit test suite:
 ```bash
@@ -132,7 +163,7 @@ pytest tests -v
 
 ---
 
-## 6. Step-by-Step Azure Deployment Guide
+## 7. Step-by-Step Azure Deployment Guide
 
 To deploy the backend securely in production without hardcoding keys, implement the following steps:
 
@@ -158,3 +189,14 @@ To deploy the backend securely in production without hardcoding keys, implement 
    * **Name**: `CosmosDBConnectionString`
    * **Value**: `@Microsoft.KeyVault(VaultName=kv-capstone-db;SecretName=CosmosDBConnectionString)`
 3. Save the configurations. Azure will automatically resolve the secret at runtime.
+
+### Step E: Wire Up the AI Language Service (Same Pattern)
+1. In `kv-capstone-db`, go to **Objects -> Secrets -> Generate/Import** and create a secret named `LanguageKey` containing the team's Language resource key.
+2. Back in the Function App's **Application settings**, add:
+   * **Name**: `LANGUAGE_KEY`
+   * **Value**: `@Microsoft.KeyVault(VaultName=kv-capstone-db;SecretName=LanguageKey)`
+3. Add these as plain (non-secret) Application settings, since they aren't sensitive:
+   * `LANGUAGE_ENDPOINT` = the Language resource's endpoint URL
+   * `LANGUAGE_CTC_PROJECT` = `TicketTriageClassifier`
+   * `LANGUAGE_CTC_DEPLOYMENT` = `production`
+4. Confirm the Function App's Managed Identity already has **Get**/**List** permission on `kv-capstone-db` (should already be set from Step C).
