@@ -68,27 +68,21 @@
               <div class="err"></div>
             </div>
 
-            <div class="grid-2">
-              <div class="field" data-field="priority">
-                <label for="priority">Priority <span class="hint">- optional</span></label>
-                <select id="priority" name="priority">
-                  <option value="Low">Low</option>
-                  <option value="Medium" selected>Medium</option>
-                  <option value="High">High</option>
-                </select>
-                <div class="err"></div>
-              </div>
-              <div class="field" data-field="category">
-                <label for="category">Category <span class="hint">- optional, leave blank to auto-detect</span></label>
-                <select id="category" name="category">
-                  <option value="">Suggest one for me</option>
-                </select>
-                <div class="err"></div>
-              </div>
+            <div class="field" data-field="priority" style="margin-bottom:24px;">
+              <label for="priority">Priority <span class="hint">- optional</span></label>
+              <select id="priority" name="priority">
+                <option value="Low">Low</option>
+                <option value="Medium" selected>Medium</option>
+                <option value="High">High</option>
+              </select>
+              <div class="err"></div>
             </div>
+            <input id="category" type="hidden" name="category" value="">
 
-            <button id="submit-btn" type="submit">Submit ticket</button>
-            <button id="reset-btn" type="button" class="ghost">Clear</button>
+            <div style="display:flex;gap:10px;justify-content:flex-end;align-items:center;">
+              <button id="reset-btn" type="button" class="ghost">Clear</button>
+              <button id="submit-btn" type="submit">Submit ticket</button>
+            </div>
           </form>
         </div>
 
