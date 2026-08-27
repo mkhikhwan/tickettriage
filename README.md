@@ -27,7 +27,6 @@ Welcome to Group 1's **Ticket Triage** project! This application streamlines sup
 ---
 
 ## Documentation
-
 * [Architecture Diagram](docs/architecture-diagram.pdf)
 * [Azure Resource Group](docs/azure-rg.png)
 
@@ -42,6 +41,8 @@ Welcome to Group 1's **Ticket Triage** project! This application streamlines sup
 5. [Connecting to Azure AI Language (Ticket Classification)](#5-connecting-to-azure-ai-language-ticket-classification)
 6. [Running Unit Tests](#6-running-unit-tests)
 7. [Step-by-Step Azure Deployment Guide](#7-step-by-step-azure-deployment-guide)
+7. [Step-by-Step Azure Deployment Guide](#7-step-by-step-azure-deployment-guide)
+8. [Screenshot](#8-screenshot)
 
 ---
 
@@ -269,3 +270,10 @@ To deploy the backend securely in production without hardcoding keys, implement 
    * `LANGUAGE_CTC_PROJECT` = `TicketTriageClassifier`
    * `LANGUAGE_CTC_DEPLOYMENT` = `production`
 4. Confirm the Function App's Managed Identity already has **Get**/**List** permission on `kv-capstone-db` (should already be set from Step C).
+
+---
+
+## 8. Screenshot
+
+![Student Demo](docs/demo-student.png)
+![Admin Demo](docs/demo-admin.png)
