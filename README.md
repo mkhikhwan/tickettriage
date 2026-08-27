@@ -13,7 +13,6 @@ Welcome to Group 1's **Ticket Triage** project! This application streamlines sup
 * **Automated Ticket Classification:** Dynamically categorizes incoming support tickets using AI models and fallback keyword-matching logic.
 * **Database Integration:** Seamlessly stores, queries, and updates ticket records using Azure Cosmos DB.
 * **Admin Management Console:** Enables support staff to update ticket statuses, assign priorities, and manage overall lifecycle stages.
-* **Role-Based Workflows:** Designed specifically to handle mixed requests from both students and staff members efficiently.
 
 ## Group 1 Contributors
 
