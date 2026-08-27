@@ -14,13 +14,15 @@ Welcome to Group 1's **Ticket Triage** project! This application streamlines sup
 * **Database Integration:** Seamlessly stores, queries, and updates ticket records using Azure Cosmos DB.
 * **Admin Management Console:** Enables support staff to update ticket statuses, assign priorities, and manage overall lifecycle stages.
 
+---
+
 ## Group 1 Contributors
 
-* @mkhikhwan
-* @damienuwu
-* @farhanazl
-* @itsnotyourjay
-* @lawalah
+* [@mkhikhwan](https://github.com/mkhikhwan)
+* [@damienuwu](https://github.com/damienuwu)
+* [@farhanazl](https://github.com/farhanazl)
+* [@itsnotyourjay](https://github.com/itsnotyourjay)
+* [@lawalah](https://github.com/lawalah)
 
 ---
 
